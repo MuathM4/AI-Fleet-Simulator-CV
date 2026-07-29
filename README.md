@@ -58,6 +58,14 @@ Before passing visual data to detection models, video frames were sampled, compr
 Extract frames from video footage into time-indexed JPEG images:
 ```bash
 python src/video_processing_cv.py
+
+2. Synchronization
+Align extracted image frames with ground truth CSV telemetry logs:
+
+Bash
+python src/sync_telematics.py
+🔗 Author
+Muath Makhlouf – LinkedIn Profile | GitHub Profile
 2. Synchronization
 Align extracted image frames with ground truth CSV telemetry logs:
 
