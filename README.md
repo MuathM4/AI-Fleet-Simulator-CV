@@ -1,31 +1,22 @@
-# AI-Fleet-Simulator: Computer Vision Analytics (Continued From Previous Project)
+## 📊 Telematics & Frame Synchronization Results
 
-Building on Phase 1's telematics framework, this project adds vision-based analysis. 
-The goal: compare what a camera sees against what the sensors recorded.
+The table below highlights the alignment efficiency between raw video frames and logging telematics across Jobs 1, 2, and 3:
 
-**Status:** In Progress  
-**Timeline:** Summer 2026
+| Dataset | Active Telematics Rows | Frames Found | Frames Matched | Coverage (%) | Frame Use (%) |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Job 1** | 5,540 | 5,395 | 5,240 | **94.58%** | **97.13%** |
+| **Job 2** | 5,207 | 7,927 | 5,204 | **99.94%** | **65.65%** |
+| **Job 3** | 3,570 | 3,803 | 3,567 | **99.92%** | **93.79%** |
 
-## What We're Doing
+---
 
-**Video Data:** 11.5 hours of continuous simulation footage from 10 transport missions.
+### 🖼️ Sync Summary Proofs
 
-**Processing:** Writing code to slice, compress, and align camera frames with the 
-sensor timestamps we collected in Phase 1.
+#### **Job 1 Sync Output**
+![Job 1 Sync Summary](docs/images/job1_sync_summary.png)
 
-**Detection:** Using OpenCV and YOLO to track lane positions and spot other vehicles.
+#### **Job 2 Sync Output**
+![Job 2 Sync Summary](docs/images/job2_sync_summary.png)
 
-**The Real Test:** Take the vision system's response times and stack them against the 
-telemetry sensor data (which hit 99.22% accuracy). See where vision falls short.
-
-## Where This Fits
-
-Phase 1 built the foundation—10,000 km of clean telemetry data and a working Random 
-Forest model. Phase 2 plugs in the camera. The two systems should agree most of the 
-time. When they don't, we learn something.
-
-For Phase 1 details: [AI-Fleet-Simulator](https://github.com/MuathM4/AI-Fleet-Simulator)
-
-## Tech Stack
-
-Computer Vision · OpenCV · YOLO · Video Preprocessing · Sensor Fusion
+#### **Job 3 Sync Output**
+![Job 3 Sync Summary](docs/images/job3_sync_summary.png)
