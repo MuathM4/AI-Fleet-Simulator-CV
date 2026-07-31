@@ -1,10 +1,10 @@
-# 🚘 AI-Fleet-Simulator-CV: Computer Vision-Based Driver Behavior AI (Phase 2)
+# AI-Fleet-Simulator-CV: Computer Vision-Based Driver Behavior AI (Phase 2)
 
 **Jul 2026 – Present** *Building on Phase 1’s IoT Telematics Framework by integrating real-time Computer Vision and Sensor Fusion Analytics.*
 
 ---
 
-## 📌 Project Overview & Summary
+## Project Overview & Summary
 
 This project is a continuation of the [AI Fleet Simulator (Phase 1)](https://github.com/MuathM4/AI-Fleet-Simulator). In Phase 2, we integrate a computer vision analytics pipeline to evaluate driver behavior using recorded video footage across **10 transport missions (totaling ~11.5 hours of driving footage)**.
 
@@ -19,7 +19,7 @@ The primary objective is **Sensor Fusion Validation**:
 
 ---
 
-## 🛠️ Skills & Technologies
+## Skills & Technologies
 
 * **Computer Vision:** OpenCV, YOLO (You Only Look Once)
 * **Data Engineering & Analysis:** Python, Pandas, NumPy, Glob
@@ -32,17 +32,18 @@ The primary objective is **Sensor Fusion Validation**:
 
 Before feeding visual frames into detection models, camera frames were sampled and time-aligned with ground-truth telemetry rows using custom nearest-neighbor timestamp matching and clock-rollover correction logic.
 
-| Mission Dataset | Active Telematics Rows | Frames Extracted | Frames Matched | Coverage (%) | Frame Use (%) |
+| Dataset | Active Telematics Rows | Frames Found | Frames Matched | Coverage (%) | Frame Use (%) |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | **Job 1** | 5,540 | 5,395 | 5,240 | **94.58%** | **97.13%** |
 | **Job 2** | 5,207 | 7,927 | 5,204 | **99.94%** | **65.65%** |
 | **Job 3** | 3,570 | 3,803 | 3,567 | **99.92%** | **93.79%** |
+| **Job 4** | 5,338 | 5,330 | 5,327 | **99.79%** | **99.94%** |
 
 *Note: In Job 2, trailing telematics rows logged after video recording stopped were automatically trimmed to reflect the active video window, achieving **99.94%** coverage.*
 
 ---
 
-## 🖼️ Terminal Synchronization Output Proofs
+## Terminal Synchronization Output Proofs
 
 #### **Job 1 Sync Output**
 ![Job 1 Sync Summary](docs/images/job1_sync_summary.png)
@@ -53,15 +54,17 @@ Before feeding visual frames into detection models, camera frames were sampled a
 #### **Job 3 Sync Output**
 ![Job 3 Sync Summary](docs/images/job3_sync_summary.png)
 
+#### **Job 4 Sync Output**
+![Job 4 Sync Summary](docs/images/job4_sync_summary.png)
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 AI-Fleet-Simulator-CV/
 │
 ├── data/
-│   ├── raw_videos/            # Video input files (Job1.mp4, Job2.mp4, Job3.mp4)
+│   ├── raw_videos/            # Video input files (Job1.mp4, Job2.mp4, Job3.mp4, Job4.mp4)
 │   ├── telematics/            # Ground truth sensor CSVs from Phase 1
 │   ├── extracted_frames/      # Extracted frame image files
 │   └── processed/             # Synced CSV files containing paired frames & telematics
@@ -71,6 +74,8 @@ AI-Fleet-Simulator-CV/
 │       ├── job1_sync_summary.png
 │       ├── job2_sync_summary.png
 │       └── job3_sync_summary.png
+        └── job4_sync_summary.png
+
 │
 ├── src/
 │   ├── video_processing_cv.py # Frame extraction and sampling script
@@ -83,7 +88,7 @@ AI-Fleet-Simulator-CV/
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ### 1. Install Dependencies
 
@@ -110,14 +115,9 @@ python src/sync_telematics.py
 
 ```
 
----
 
-## 🔗 Author & Links
+## Author & Links
 
 * **Author:** Muath Makhlouf
 * **LinkedIn:** [Muath Makhlouf](https://www.linkedin.com/in/muath-makhlouf-a198a4308/)
 * **GitHub Repository:** [MuathM4/AI-Fleet-Simulator-CV](https://github.com/MuathM4/AI-Fleet-Simulator-CV)
-
-```
-
-```
