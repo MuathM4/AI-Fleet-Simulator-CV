@@ -40,6 +40,8 @@ Before feeding visual frames into detection models, camera frames were sampled a
 | **Job 4** | 5,338 | 5,330 | 5,327 | **99.79%** | **99.94%** |
 | **Job 5** | 1,840 | 4,205 | 1,836 | **99.78%** | **43.66%** |
 | **Job 6** | 2,231 | 2,292 | 2,227 | **99.82%** | **97.16%** |
+| **Job 7** | 2,231 | 2,292 | 2,227 | **99.82%** | **97.16%** |
+| **Job 8** | 2,231 | 2,292 | 2,227 | **99.82%** | **97.16%** |
 
 *Note: In Job 2, trailing telematics rows logged after video recording stopped were automatically trimmed to reflect the active video window, achieving **99.94%** coverage.*
 
@@ -65,6 +67,12 @@ Before feeding visual frames into detection models, camera frames were sampled a
 #### **Job 6 Sync Output**
 ![Job 6 Sync Summary](docs/images/job6_sync_summary.png)
 
+#### **Job 7 Sync Output**
+![Job 7 Sync Summary](docs/images/job7_sync_summary.png)
+
+#### **Job 8 Sync Output**
+![Job 8 Sync Summary](docs/images/job8_sync_summary.png)
+
 ---
 
 ## Project Structure
@@ -73,11 +81,11 @@ Before feeding visual frames into detection models, camera frames were sampled a
 AI-Fleet-Simulator-CV/
 │
 ├── data/
-│   ├── raw_videos/            # Video input files (Job1.mp4, Job2.mp4, Job3.mp4, Job4.mp4, Job5.mp4, Job6.mp4)
+│   ├── raw_videos/            # Video input files (Job1.mp4 to Job8.mp4)
 │   ├── telematics/            # Ground truth sensor CSVs from Phase 1
 │   ├── extracted_frames/      # Extracted frame image files
 │   └── processed/             # Synced CSV files containing paired frames & telematics
-│
+
 ├── docs/
 │   └── images/                # Screenshots used in README
 │       ├── job1_sync_summary.png
@@ -85,7 +93,9 @@ AI-Fleet-Simulator-CV/
 │       ├── job3_sync_summary.png
 │       ├── job4_sync_summary.png
 │       ├── job5_sync_summary.png
-│       └── job6_sync_summary.png
+│       ├── job6_sync_summary.png
+│       ├── job7_sync_summary.png
+│       └── job8_sync_summary.png
 │
 ├── src/
 │   ├── video_processing_cv.py # Frame extraction and sampling script
@@ -94,28 +104,20 @@ AI-Fleet-Simulator-CV/
 ├── README.md                  # Project documentation
 └── requirements.txt           # Python dependencies
 ```
-
-
-## How to Run
-
-1. Install Dependencies
+How to Run
+Bash
+# 1. Install Dependencies
 ```
 pip install -r requirements.txt
 ```
-
-3. Extract Video Frames
-Extract sample frames from video recordings:
+# 2. Extract Video Frames
 ```
 python src/video_processing_cv.py
 ```
-
-3. Synchronize Frames with Telematics Logs
-Match extracted video image timestamps with ground-truth sensor rows:
-
+# 3. Synchronize Frames with Telematics Logs
 ```
 python src/sync_telematics.py
 ```
-
 Author & Links
 Author: Muath Makhlouf
 
