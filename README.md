@@ -40,8 +40,8 @@ Before feeding visual frames into detection models, camera frames were sampled a
 | **Job 4** | 5,338 | 5,330 | 5,327 | **99.79%** | **99.94%** |
 | **Job 5** | 1,840 | 4,205 | 1,836 | **99.78%** | **43.66%** |
 | **Job 6** | 2,231 | 2,292 | 2,227 | **99.82%** | **97.16%** |
-| **Job 7** | 2,231 | 2,292 | 2,227 | **99.82%** | **97.16%** |
-| **Job 8** | 2,231 | 2,292 | 2,227 | **99.82%** | **97.16%** |
+| **Job 7** | 2,455 | 4,122 | 2,453 | **99.92%** | **59.51%** |
+| **Job 8** | 4,217 | 4,278 | 4,207 | **99.76%** | **98.34%** |
 
 *Note: In Job 2, trailing telematics rows logged after video recording stopped were automatically trimmed to reflect the active video window, achieving **99.94%** coverage.*
 
