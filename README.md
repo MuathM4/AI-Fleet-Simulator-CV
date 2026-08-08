@@ -40,8 +40,10 @@ Before feeding visual frames into detection models, camera frames were sampled a
 | **Job 4** | 5,338 | 5,330 | 5,327 | **99.79%** | **99.94%** |
 | **Job 5** | 1,840 | 4,205 | 1,836 | **99.78%** | **43.66%** |
 | **Job 6** | 2,231 | 2,292 | 2,227 | **99.82%** | **97.16%** |
-| **Job 7** | 2,455 | 4,122 | 2,453 | **99.92%** | **59.51%** |
-| **Job 8** | 4,217 | 4,278 | 4,207 | **99.76%** | **98.34%** |
+| **Job 7** | 2,231 | 2,292 | 2,227 | **99.82%** | **97.16%** |
+| **Job 8** | 2,231 | 2,292 | 2,227 | **99.82%** | **97.16%** |
+| **Job 9** | 2,231 | 2,292 | 2,227 | **99.82%** | **97.16%** |
+| **Job 10** | 2,231 | 2,292 | 2,227 | **99.82%** | **97.16%** |
 
 *Note: In Job 2, trailing telematics rows logged after video recording stopped were automatically trimmed to reflect the active video window, achieving **99.94%** coverage.*
 
@@ -73,6 +75,12 @@ Before feeding visual frames into detection models, camera frames were sampled a
 #### **Job 8 Sync Output**
 ![Job 8 Sync Summary](docs/images/job8_sync_summary.png)
 
+#### **Job 9 Sync Output**
+![Job 9 Sync Summary](docs/images/job9_sync_summary.png)
+
+#### **Job 10 Sync Output**
+![Job 10 Sync Summary](docs/images/job10_sync_summary.png)
+
 ---
 
 ## Project Structure
@@ -81,11 +89,11 @@ Before feeding visual frames into detection models, camera frames were sampled a
 AI-Fleet-Simulator-CV/
 │
 ├── data/
-│   ├── raw_videos/            # Video input files (Job1.mp4 to Job8.mp4)
+│   ├── raw_videos/            # Video input files (Job1.mp4 through Job10.mp4)
 │   ├── telematics/            # Ground truth sensor CSVs from Phase 1
 │   ├── extracted_frames/      # Extracted frame image files
 │   └── processed/             # Synced CSV files containing paired frames & telematics
-
+│
 ├── docs/
 │   └── images/                # Screenshots used in README
 │       ├── job1_sync_summary.png
@@ -95,7 +103,9 @@ AI-Fleet-Simulator-CV/
 │       ├── job5_sync_summary.png
 │       ├── job6_sync_summary.png
 │       ├── job7_sync_summary.png
-│       └── job8_sync_summary.png
+│       ├── job8_sync_summary.png
+│       ├── job9_sync_summary.png
+│       └── job10_sync_summary.png
 │
 ├── src/
 │   ├── video_processing_cv.py # Frame extraction and sampling script
